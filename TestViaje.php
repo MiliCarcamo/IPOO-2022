@@ -12,11 +12,14 @@ $capacidadPasajeros = trim(fgets(STDIN)) ;
 echo "Ingrese la cantidad de pasajeros que estaran en el viaje: " ;
 $cantPasajeros = trim(fgets(STDIN)) ;
 
+
+//Creo el if para averiguar si la cant de pasajeros que estaran en el viaje supera la cant max de pasajeros
 if ($cantPasajeros <= $capacidadPasajeros) {
     $personas = informacionPasajeros($cantPasajeros) ;
     //Creo una nueva instancia de la clase Viaje
     $objViaje = new Viaje($codigo, $destino, $capacidadPasajeros, $personas) ;
     
+    //Si la cant de pasajeros a bordo es menor a la cant max de pasajeros, le pregunto si quiere ingresar mas pasajeros al viaje
     if ($cantPasajeros < $capacidadPasajeros) {
         
         do {

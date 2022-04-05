@@ -102,7 +102,7 @@ class Viaje {
         return $hayLugar;
     }
 
-
+    //Metodo __toString
     public function __toString()
     {
         $cadena = "El codigo de viaje es: ". $this->getCodigo() . "\n" . 
